@@ -5,16 +5,16 @@
 
 struct Pos{
 	int id;
-	string est[]={"on", "off"};
+	string est[]={"on", "off"};//on:sigue en el tablero, off:ya fue retirada del tablero
 };
 
-void Tablero::Crearlist(){
+void Tablero::Crearlist(){//reserva el espacio en memoria de la matriz que almacena las cartas
 	for (int i=0;i<4;i++){
 		listcard[i]=new Pos[4];
 	};
 };
 
-void Tablero::Llenarlist(Pos** listcard){
+void Tablero::Llenarlist(Pos** listcard){//llena la matriz creada en crearlist
 	int num=1;
 	for (int i=0;i<4;i++){
 		for (int j=0;j<4;j+2){
@@ -25,7 +25,7 @@ void Tablero::Llenarlist(Pos** listcard){
 	};
 };
 
-void Tablero::Revolver(Pos** listcard){
+void Tablero::Revolver(Pos** listcard){//revuelve las cartas
 	for (int i=0;i<4;i++){
 		for (int j=0;j<4;j++){
 			srand(time(NULL));
@@ -38,7 +38,7 @@ void Tablero::Revolver(Pos** listcard){
 	};
 };
 
-void Tablero::Cartason(Pos** listcard){
+void Tablero::Cartason(Pos** listcard){//revisa que cartas estan activas
 	int on=0, off=0;
 	for (int i=0;i<4;i++){
 		for (int j=0;j<4;j++){
@@ -56,10 +56,6 @@ void Tablero::Cartason(Pos** listcard){
 		cout<<"Quedan :"<<cartas<<" cartas en el tablero";
 	};
 };
-
-
-
-
 
 
 

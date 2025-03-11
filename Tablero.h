@@ -9,9 +9,9 @@ class Tablero{
 		Pos** listcard[]=new Pos*[4];
 		Pos* aux;
 		Crearlist();
-		Revolver(Pos listcard);
-		Llenarlist(Pos listcard);
-		Cartason(Pos listcard);
+		Revolver(Pos** listcard);
+		Llenarlist(Pos** listcard);
+		Cartason(Pos** listcard);
 };
 
 #endif
