@@ -7,6 +7,8 @@ class Turno{
 		int eleccion[2], fila, columna;
 		Turno(Pos** listcard);
 		int getPlayers(int players);
+		Voltear();
+		Mostrar();
 	private:
 		int puntos;
 };

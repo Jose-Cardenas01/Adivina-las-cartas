@@ -5,7 +5,8 @@
 
 struct Pos{
 	int id;
-	string est[]={"on", "off"};//on:sigue en el tablero, off:ya fue retirada del tablero
+	int est[0, 1, 2]={};//0:esta boca abajo, 1:esta boca arriba, 2:ya se retiro
+	string color[]={BG_BLACK, BG_RED, BG_GREEN, BG_YELLOW, BG_BLUE, BG_MAGENTA, BG_CYAN, BG_WHITE, BG_ORANGE, BG_LBLUE, BG_LGREEN, BG_GRAY, BG_ROSE};
 };
 
 void Tablero::Crearlist(){//reserva el espacio en memoria de la matriz que almacena las cartas
@@ -15,12 +16,15 @@ void Tablero::Crearlist(){//reserva el espacio en memoria de la matriz que almac
 };
 
 void Tablero::Llenarlist(Pos** listcard){//llena la matriz creada en crearlist
-	int num=1;
+	int num=1, random;
+	srand(time(NULL));
+	random=0+(rand()%13);
 	for (int i=0;i<4;i++){
 		for (int j=0;j<4;j+2){
 			listcard[i][j].id=num;
 			listcard[i][j+1].id=num++;
 			listcard[i][j].est=est[0];
+			listcard[i][j].color=color[random];
 		};
 	};
 };

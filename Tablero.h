@@ -1,5 +1,6 @@
 #ifndef TABLERO
 #define TABLERO
+#include <colors.h>
 
 class Tablero{
 	public:
