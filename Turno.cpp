@@ -1,4 +1,5 @@
 #include <iostream>
+#include "./Turno.h"
 
 Turno::Turno(Pos** listcard){
 	puntos=0;
@@ -26,7 +27,7 @@ Turno::Turno(Pos** listcard){
 void Turno::Voltear(int i, int j){
 	if (listcard[i][j].est==0){
 		listcard[i][j].est=1;
-	},
+	};
 	if (listcard[i][j].est==1){
 		listcard[i][j].est==0
 	};
@@ -35,7 +36,7 @@ void Turno::Voltear(int i, int j){
 	};
 };
 void Turno::Mostrar(){
-	if (listcard[i][j].est==0){
+	if (listcard[i][j].est==1){
 		cout<<listcard[i][j].color;
 	}else {
 		cout<<listcard[i][j].id;
@@ -43,7 +44,7 @@ void Turno::Mostrar(){
 };
 
 
-int Turno::getPlayers(int puntos){
+int Turno::getPuntos(int puntos){
 	return puntos;
 };
 
