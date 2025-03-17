@@ -4,13 +4,13 @@
 
 class Turno{
 	public:
-		int eleccion[2], fila, columna;
-		Turno(Pos** listcard);
-		int getPlayers(int puntos);
-		int get
+		int eleccion[2], posicion;
+		Turno();
+		int getPuntos();
 		Voltear();
 		Mostrar();
 	private:
+		Tablero mesa;
 		int puntos;
 };
 

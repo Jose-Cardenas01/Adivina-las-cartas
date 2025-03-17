@@ -9,7 +9,8 @@ class Jugadores{
 		int numplayer, puntos=0;
 		Jugar(Turno* turno);
 	private:
-		ContadorPuntos(getPuntos);
+		int punt=0;
+		ContadorPuntos(int i);
 		Jugadores();
 		Ganador();
 		Puntos players[numplayer];
